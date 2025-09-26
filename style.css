@@ -18,3 +18,53 @@
     margin-top: 3vh;
     text-align: center;
 }
+
+#navbar_div {
+    margin-left: 30vh;
+    margin-right: 30vh;
+    margin-top:2vh;
+}
+
+.navbar-brand {
+    margin-left: 5vh;
+}
+
+#nav_links {
+    margin-right: 5vh;
+}
+
+#about_me_title {
+    margin-left: 30vh;
+}
+
+#projects_title {
+    margin-left: 30vh;
+    margin-top: 10vh;
+}
+
+#carouselProjects {
+    max-width: 800px; 
+    margin: auto;
+}
+
+.carousel-item {
+    height: 400px;
+}
+
+.carousel-img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+    filter: brightness(70%) blur(2px);
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.carousel-img:hover {
+    transform: translateY(-10px); /* soulève l'image de 10px */
+    filter: brightness(80%);      /* optionnel : assombrir un peu au survol */
+}
+
+.carousel-item:hover .carousel-caption {
+    color: #9cadd3;
+    transition: color 0.3s ease;
+}
