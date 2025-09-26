@@ -1,0 +1,20 @@
+.avatar {
+ max-width: 70vw;   
+  max-height: 70vh;  
+  width: auto;        
+  height: auto;       
+  display: block;
+  margin: 0 auto;     
+  border-radius: 50%;
+}
+
+#presentation {
+    height: 80vh; 
+    margin-left: 45vh;
+    margin-right: 45vh;
+}
+
+#info_buttons {
+    margin-top: 3vh;
+    text-align: center;
+}
