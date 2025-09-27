@@ -5,35 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link rel="stylesheet" href="style.css">
-    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   </head>
   <body>
     <section id="home_page">
         <div class="container-fluid">
             <div id="navbar_div">
-                <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                    <div class="collapse navbar-collapse justify-content-left">
+               <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+                    <div class="container-fluid">
                         <a class="navbar-brand" href="#">Alizée Bochaton</a>
-                    </div>
-                    <div id="nav_links" class="collapse navbar-collapse justify-content-end">
-                        <ul class="navbar-nav">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">À propos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Projets</a>
-                            </li>
-                            <li class="Contact">
-                                <a class="nav-link" href="#">Contact</a>
-                            </li>
-                        </ul>
+                        <div class="navbar-collapse justify-content-end" id="nav_links">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#about_me">À propos</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#projects">Projets</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#labs">Challenges et labs</a>
+                                </li>
+                                <li class="nav-item">
+                                    <button type="button" class="nav-link btn btn-link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</button>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </nav>
             </div>
+            <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="contactModalLabel">Contact Info</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h5>Email:</h5>
+                        <p>abochaton.pro@gmail.com</p>
+                        <h5>Téléphone:</h5>
+                        <p>+33 7 65 88 72 99</p>
+                        <h5>LinkedIn:</h5>
+                        <p><a href="https://www.linkedin.com/in/aliz%C3%A9e-bochaton-b37835330/" target="_blank">Mon profil LinkedIn</a></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
             <div class="row align-items-center mb-5" id="presentation">
                 <div class="col-6 d-flex justify-content-center">
-                    <img src="images/avatar.png" class="avatar" alt="Avatar">
+                    <img src="assets/avatar.png" class="avatar" alt="Avatar">
                 </div>
                 <div class="col-6 d-flex flex-column justify-content-center align-items-center">
                     <h5 class="mb-2">Bonjour, je suis</h5>
@@ -41,7 +61,7 @@
                     <h6 class="mb-3"><em>Étudiante en informatique et cybersécurité</em></h3>
                     <div class="d-flex gap-3" id="info_buttons"> 
                         <button type="button" class="btn btn-secondary" onclick="window.location.href='assets/CV_BOCHATON_Alizee.pdf';">Mon CV</button>
-                        <button type="button" class="btn btn-secondary">Me contacter</button> <!-- MODALE ICI APRES -->
+                        <button type="button" class="btn-secondary btn" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Me contacter</button> <!-- MODALE ICI APRES -->
                     </div>
                 </div>
             </div>
@@ -86,47 +106,79 @@
             <div class="row justify-content-start mb-5" id="projects_title">
                 <h2 class="section_title">Projets</h2>
             </div>
+            <div class="row justify-content-start mb-5" id="projects_subtitle">
+                <p id="section_subtitle"><i>L'apprentissage à Guardia Cybersecurity School se fait par projets, ce qui permet d'apprendre en appliquant directement les connaissances et savoir-faires transmis par les intervenants. Ces projets permettent aussi d'apprendre à travailler en équipe, comme en entreprise. Voici une sélection de ce que j'ai déjà pu accomplir.</i></p>
+            </div>
             <div class="row justify-content-center" id="projects">
-                <div id="carouselProjects" class="carousel slide"  data-bs-ride="carousel">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselProjects" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselProjects" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselProjects" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="assets/carousel_web.png" class="d-block w-100 carousel-img" alt="First slide">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Développement web</h5>
-                                <p>Réalisation en équipe d'un portfolio d'un équipe fictive</p>
+                <div id="carouselCards" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                        <div class="card d-flex flex-column">
+                            <img src="assets/carousel_web.jpeg" class="card-img-top" alt="Web">
+                            <div class="card-body d-flex flex-column">
+                            <h5 class="card-title mb-2">Développement web</h5>
+                            <p class="card-text mb-3">Réalisation en équipe d'un portfolio fictif</p>
+                            <a href="web_project.html" id="button_projects" class="btn btn-primary mt-auto">En savoir plus</a>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="assets/carousel_reseau.webp" class="d-block w-100 carousel-img" alt="Second slide">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Administration réseau</h5>
-                                <p>Création d'un réseau de machines virtuelles avec OPNSense</p>
+                        </div>
+                        <div class="col-md-4 d-none d-md-block">
+                        <div class="card d-flex flex-column">
+                            <img src="assets/carousel_reseau.webp" class="card-img-top" alt="Réseau">
+                            <div class="card-body d-flex flex-column">
+                            <h5 class="card-title mb-2">Administration réseau</h5>
+                            <p class="card-text mb-3">Création d'un réseau de machines virtuelles avec OPNSense</p>
+                            <a href="#" id="button_projects" class="btn btn-primary mt-auto">En savoir plus</a>
                             </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="assets/reverse_carousel.jpg" class="d-block w-100 carousel-img" alt="Third slide">
-                            <div class="carousel-caption d-none d-md-block">
-                                <h5>Reverse Engineering</h5>
-                                <p>Etude d'un objet connecté vulnérable avec oscilloscope, dump de firmware</p>
-                            </div>
                         </div>
                     </div>
-
-                    <!-- Contrôles -->
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProjects" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselProjects" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+                    </div>
+                    <div class="carousel-item">
+                    <div class="row justify-content-center">
+                        <div class="col-md-4">
+                        <div class="card d-flex flex-column">
+                            <img src="assets/iot_carousel.jpg" class="card-img-top" alt="IoT">
+                            <div class="card-body d-flex flex-column">
+                            <h5 class="card-title mb-2">Electronique embarquée - IoT</h5>
+                            <p class="card-text mb-3">Système d'accès RFID avec ESP-32</p>
+                            <a href="#" id="button_projects" class="btn btn-primary mt-auto">En savoir plus</a>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-md-4 d-none d-md-block">
+                        <div class="card d-flex flex-column">
+                            <img src="assets/reverse_carousel.jpg" class="card-img-top" alt="Reverse">
+                            <div class="card-body d-flex flex-column">
+                            <h5 class="card-title mb-2">Reverse Engineering</h5>
+                            <p class="card-text mb-3">Analyse d’un objet connecté vulnérable</p>
+                            <a href="#" id="button_projects" class="btn btn-primary mt-auto">En savoir plus</a>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCards" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselCards" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="labs">
+        <div class="container-fluid">
+            <div class="row justify-content-start mb-5" id="labs_title">
+                <h2 class="section_title">Challenges et Labs</h2>
+            </div>
+            <div class="row justify-content-start mb-5" id="projects_subtitle">
+                <p id="section_subtitle"><i>Dans mon temps libre, je développe mes compétences, notamment en pentest, en réalisant des challenges et labs sur différentes plateformes.</i></p>
             </div>
         </div>
     </section>
