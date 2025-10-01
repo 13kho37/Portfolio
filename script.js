@@ -8,10 +8,17 @@ const projets = [
     },
     {
         title: "Administration et supervision réseau",
-        description:"test",
-        features: ["test1", "test2", "test3"],
-        image: "assets/carousel_reseau.jpeg",
-        link: "test"
+        description:"Création d'un réseau de machines virtuelles avec Proxmox et OpnSense",
+        features: ["Virtualisation de machine", "Configuration de proxy et reverse proxy", "Administration windows server (DHCP, DNS, AD)", "Configuration de wazuh"],
+        image: "assets/carousel_reseau.webp",
+        link: "reseau_project.html"
+    },
+    {
+        title: "Administration et supervision réseau",
+        description:"Création d'un réseau de machines virtuelles avec Proxmox et OpnSense",
+        features: ["Virtualisation de machine", "Configuration de proxy et reverse proxy", "Administration windows server (DHCP, DNS, AD)", "Configuration de wazuh"],
+        image: "assets/carousel_reseau.webp",
+        link: "reseau_project.html"
     }
 ];
 
@@ -19,10 +26,6 @@ const projectContainer = document.getElementById('project-container');
 
 document.addEventListener('DOMContentLoaded', () => {
     createProjectCard(window.innerWidth); 
-});
-
-window.addEventListener('resize', () => {
-    createProjectCard(window.innerWidth);
 });
 
 function createProjectCard(screenSize) {
@@ -33,7 +36,7 @@ function createProjectCard(screenSize) {
             <div class="carousel-item ${projectContainer.innerHTML === '' ? 'active' : ''}">
                 <div class="row justify-content-center">
                     <div class="col-md-4">
-                        <div class="card d-flex flex-column mb-3">
+                        <div class="card d-flex flex-column mb-3 h-100">
                             <img src="${projet.image}" class="card-img-top" alt="${projet.title}">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title mb-2">${projet.title}</h5>
@@ -50,6 +53,7 @@ function createProjectCard(screenSize) {
             `;
         });
     } else {
+        projectContainer.innerHTML = '';
         for (let i = 0; i < projets.length; i += 2) {
             const projet1 = projets[i];
             const projet2 = projets[i + 1];
@@ -58,7 +62,7 @@ function createProjectCard(screenSize) {
             <div class="carousel-item ${i === 0 ? 'active' : ''}">
                 <div class="row justify-content-center">
                     <div class="col-md-4">
-                        <div class="card d-flex flex-column mb-3">
+                        <div class="card d-flex flex-column mb-3 h-100">
                             <img src="${projet1.image}" class="card-img-top" alt="${projet1.title}">
                             <div class="card-body d-flex flex-column">
                                 <h5 class="card-title mb-2">${projet1.title}</h5>
@@ -71,7 +75,7 @@ function createProjectCard(screenSize) {
                         </div>
                     </div>
                     <div class="col-md-4">
-                        <div class="card d-flex flex-column mb-3">
+                        <div class="card d-flex flex-column mb-3 h-100">
                                 <img src="${projet2.image}" class="card-img-top" alt="${projet2.title}">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title mb-2">${projet2.title}</h5>
