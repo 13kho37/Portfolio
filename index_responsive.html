@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Portfolio Alizée Bochaton</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    </head>
+    <body>
+        <section id="navbar_section">
+            <div class="container-fluid mb-4">
+                <div id="navbar_div">
+               <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html#home_page">Alizée Bochaton</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav_links" aria-controls="nav_links" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="nav_links">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link" href="index.html#about_me">À propos</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="index.html#projects">Projets</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="index.html#labs">Challenges et labs</a>
+                        </li>
+                        <li class="nav-item">
+                        <button type="button" class="nav-link btn btn-link" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</button>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                </nav>
+            </div>
+            </div>
+            <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="contactModalLabel">Contact Info</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h5>Email:</h5>
+                        <p>abochaton.pro@gmail.com</p>
+                        <h5>Téléphone:</h5>
+                        <p>+33 7 65 88 72 99</p>
+                        <h5>LinkedIn:</h5>
+                        <p><a href="https://www.linkedin.com/in/aliz%C3%A9e-bochaton-b37835330/" target="_blank">Mon profil LinkedIn</a></p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="home_page">
+            <div class="row justify-content-center mt-5" id="home_page_content">
+                <div class="col-md-8">
+                    <div class ="row justify-content-center">
+                        <div class="col-md-6 col-sm-12 mb-3">
+                            <img src="assets/avatar.png" class="avatar" alt="Avatar">
+                        </div>
+                        <div class="col-md-6 col-sm-12 d-flex align-items-center">
+                            <div class="col-12 text-center justify-content-center">
+                                <h5 class="mb-2">Bonjour, je suis</h5>
+                                <h1 class="display-4 mb-2">Alizée Bochaton</h1>
+                                <h6 class="mb-3"><em>Étudiante en informatique et cybersécurité</em></h6>
+                                <div class="d-flex gap-3 justify-content-center" id="info_buttons"> 
+                                    <button type="button" class="btn btn-secondary" onclick="window.location.href='assets/CV_BOCHATON_Alizee.pdf';">Mon CV</button>
+                                    <button type="button" class="btn-secondary btn" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Me contacter</button> <!-- MODALE ICI APRES -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="about_me">
+            <div class="row justify-content-center mt-5" id="about_me_content">
+                <div class="col-md-8">
+                    <div class ="row justify-content-center">
+                        <div class="col-11">
+                            <h2 class="mb-4 mt-5">À propos</h2>
+                        </div>
+                       <div class="row justify-content-center align-items-stretch mt-4" id="about_me_cards">
+                            <div class="col-md-6 col-sm-12 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body d-flex flex-column justify-content-center">
+                                        <h5 class="card-title">Mon parcours</h5>
+                                        <hr class="my-2 justify-content-start" style="width:50%; margin-right:auto; border-top:2px solid #000;">
+                                        <p class="card-text">
+                                            Ayant toujours été partagée entre la logique et la créativité, j'ai suivi un parcours un peu atypique au lycée, en alliant les spécialités maths et arts plastiques.<br>
+                                            À la fin du lycée, je me suis donc orientée vers l'informatique afin de combiner rigueur logique et curiosité.<br>
+                                            Aujourd'hui, je suis en deuxième année du bachelor développement informatique option cybersécurité à Guardia Cybersecurity School, qui me permet de participer à des projets immersifs qui éveillent ma curiosité et me font monter en compétences.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-sm-12 mb-4">
+                                <div class="card h-100">
+                                    <div class="card-body d-flex flex-column justify-content-center">
+                                        <h5 class="card-title">À l’affût de nouvelles compétences</h5>
+                                        <hr class="my-2" style="width:50%; margin-right:auto; border-top:2px solid #000;">
+                                        <p class="card-text">
+                                            Toujours curieuse et avide d’apprendre, je m’intéresse à différents domaines de l’informatique – du développement web à l’architecture réseau, en passant par le SOC, le pentest ou encore le reverse engineering – afin de découvrir le domaine dans lequel je souhaiterais me spécialiser.<br>
+                                            Ce que j’adore dans l’informatique, c’est que je peux mettre mon esprit analytique au service de projets concrets et stimulants, tout en continuant à apprendre chaque jour de nouvelles compétences.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="row justify-content-center" id="projects_content">
+                <div class="col-md-8">
+                    <div class ="row justify-content-center">
+                        <div class="col-11">
+                            <h2 class="mb-4 mt-5">Projets</h2>
+                        </div>
+                    <div class="row justify-content-center mb-4" id="projects_subtitle">
+                        <div class="col-11">
+                            <p id="section_subtitle"><i>L'apprentissage à Guardia Cybersecurity School se fait par projets, ce qui permet d'apprendre en appliquant directement les connaissances et savoir-faires transmis par les intervenants. Ces projets permettent aussi d'apprendre à travailler en équipe, comme en entreprise. Voici une sélection de ce que j'ai déjà pu accomplir.</i></p>
+                        </div>
+                    </div>
+                       <div class="row justify-content-center">
+                            <div id="carouselCards" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <!-- Premier slide -->
+                                    <div class="carousel-item active">
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-4">
+                                                <div class="card d-flex flex-column">
+                                                    <img src="assets/carousel_web.jpeg" class="card-img-top" alt="Web">
+                                                    <div class="card-body d-flex flex-column">
+                                                        <h5 class="car6d-title mb-2">Développement web</h5>
+                                                        <p class="card-text mb-3">
+                                                            <u>Création d’un site web d’équipe avec HTML/CSS, PHP et MySQL.</u><br>
+                                                            Fonctionnalités : design responsive, mode sombre, pages dynamiques reliées à une BDD, gestion d’authentification.<br>
+                                                            Travail collaboratif avec GitHub, Trello et Discord.
+                                                        </p>
+                                                        <a href="web_project.html" class="btn btn-primary mt-auto">En savoir plus</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="card d-flex flex-column">
+                                                    <img src="assets/carousel_reseau.webp" class="card-img-top" alt="Réseau">
+                                                    <div class="card-body d-flex flex-column">
+                                                        <h5 class="card-title mb-2">Administration réseau</h5>
+                                                        <p class="card-text mb-3">Création d'un réseau de machines virtuelles avec OPNSense</p>
+                                                        <a href="#" class="btn btn-primary mt-auto">En savoir plus</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Deuxième slide -->
+                                    <div class="carousel-item">
+                                        <div class="row justify-content-center">
+                                            <div class="col-md-4">
+                                                <div class="card d-flex flex-column">
+                                                    <img src="assets/iot_carousel.jpg" class="card-img-top" alt="IoT">
+                                                    <div class="card-body d-flex flex-column">
+                                                        <h5 class="card-title mb-2">Electronique embarquée - IoT</h5>
+                                                        <p class="card-text mb-3">Système d'accès RFID avec ESP-32</p>
+                                                        <a href="#" class="btn btn-primary mt-auto">En savoir plus</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="card d-flex flex-column">
+                                                    <img src="assets/reverse_carousel.jpg" class="card-img-top" alt="Reverse">
+                                                    <div class="card-body d-flex flex-column">
+                                                        <h5 class="card-title mb-2">Reverse Engineering</h5>
+                                                        <p class="card-text mb-3">Analyse d’un objet connecté vulnérable</p>
+                                                        <a href="#" class="btn btn-primary mt-auto">En savoir plus</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselCards" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselCards" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    </body>
+</html>
+

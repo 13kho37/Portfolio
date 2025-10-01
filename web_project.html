@@ -13,25 +13,28 @@
         <div class="container-fluid mb-4">
             <div id="navbar_div">
                <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
-                    <div class="container-fluid">
-                        <a class="navbar-brand" href="index.html#home_page">Alizée Bochaton</a>
-                        <div class="navbar-collapse justify-content-end" id="nav_links">
-                            <ul class="navbar-nav">
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html#about_me">À propos</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html#projects">Projets</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" href="index.html#labs">Challenges et labs</a>
-                                </li>
-                                <li class="nav-item">
-                                    <button type="button" class="nav-link btn btn-link" href="#" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</button>
-                                </li>
-                            </ul>
-                        </div>
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html#home_page">Alizée Bochaton</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav_links" aria-controls="nav_links" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="nav_links">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link" href="index.html#about_me">À propos</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="index.html#projects">Projets</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="index.html#labs">Challenges et labs</a>
+                        </li>
+                        <li class="nav-item">
+                        <button type="button" class="nav-link btn btn-link" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</button>
+                        </li>
+                    </ul>
                     </div>
+                </div>
                 </nav>
             </div>
         </div>
@@ -41,7 +44,8 @@
             <div class="row justify-content-center">
                 <div class="col-md-8">
                     <h2 class="mb-4 mt-5">Développement d'un cyberfolio en équipe : retour d'expérience</h2>
-                    <p class="mb-5"><i>Dans le cadre d'un projet pédagogique DevSecOps, j’ai participé à la création d’un cyberfolio en équipe (Back to the Stack). L’objectif : concevoir et développer un site web full-stack fonctionnel pour présenter une équipe de développeurs, en approchant toutes les étapes du cycle de la maquette au back-end.</i></p>
+                    <p class="mb-4"><i>Dans le cadre d'un projet pédagogique DevSecOps, j’ai participé à la création d’un cyberfolio en équipe (Back to the Stack). L’objectif : concevoir et développer un site web full-stack fonctionnel pour présenter une équipe de développeurs, en approchant toutes les étapes du cycle de la maquette au back-end.</i></p>
+                    <a class="btn btn-primary mb-5" href="https://github.com/anthonyb240/projet--WEB-final" role="button"><i class="bi bi-github"></i>  Dépôt du projet</a>
                     <div class="card mb-5">
                         <div class="card-body">
                             <h4>Outils et organisation</h4>
@@ -65,23 +69,25 @@
                                     <li>Une maquette visuelle sur Canva, pour fixer une identité graphique (palette, structure, cohérence CSS).</li>
                                 </ul>
                             <div class="row justify-content-center">
-                                <div class="col-4">
+                                <div class="col-md-4 col-sm-12">
                                     <img src="assets/arborescence.png" class="img-fluid rounded mb-3" alt="Maquette du site">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-12 col-sm-12 justify-content-center">
+                                            <p><i>Arborescence</i></p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-md-4 col-sm-12">
                                     <img src="assets/maquette1.png" class="img-fluid rounded mb-3" alt="Maquette du site">
                                 </div> 
-                                <div class="col-4">
+                                <div class="col-md-4 col-sm-12">
                                     <img src="assets/maquette2.png" class="img-fluid rounded mb-3" alt="Maquette du site">
+                                    <div class="row justify-content-center">
+                                        <div class="col-md-12 col-sm-12 text-center">
+                                            <p class="text-center"><i>Maquettes</i></p>
+                                        </div>
+                                    </div>
                                 </div>     
-                            </div>
-                            <div class="row justify-content-center">
-                                <div class="col-4 justify-content-center">
-                                    <p><i>Arborescence</i></p>
-                                </div>
-                                <div class="col-6">
-                                    <p class="text-center"><i>Maquettes</i></p>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -117,13 +123,12 @@
                         <div class="card-body">
                             </i><h4><i class="bi bi-rocket-takeoff"></i>Ce que ce projet m'a apporté</h4>
                             <hr>
-                            <p>Côté serveur, nous avons travaillé en PHP/MySQL.
+                            <p>Au delà des compétences techniques (HTML/CSS, PHP/MySQL, Git), ce projet m’a permis de créer :
                             </p>
                             <ul>
-                                <li><strong>Pages dynamiques:</strong> la page membre.php affiche automatiquement les informations d’un membre (photo, email, compétences) à partir de la BDD.</li>
-                                <li><strong>Base de données relationnelle:</strong> tables membres, competences et membre_competences qui relie les deux précédentes grâce aux id.</li>
-                                <li><strong>Formulaire de recherche:</strong> l’utilisateur peut sélectionner une compétence, et le site renvoie les membres qui la possèdent (requêtes préparées SQL avec bind_param).</li>
-                                <li><strong>Système d’authentification:</strong> inscription et connexion via une table users, avec mots de passe hachés en MD5 (approche simple mais qui ouvre la discussion sur la sécurité des hash).</li>
+                                <li><strong>Une base de données relationnelle:</strong> tables membres, competences et membre_competences qui relie les deux précédentes grâce aux id.</li>
+                                <li><strong>Un formulaire de recherche:</strong> l’utilisateur peut sélectionner une compétence, et le site renvoie les membres qui la possèdent (requêtes préparées SQL avec bind_param).</li>
+                                <li><strong>Un système d’authentification:</strong> inscription et connexion via une table users, avec mots de passe hachés en MD5.</li>
                             </ul>
                         </div>
                     </div>
@@ -131,6 +136,6 @@
             </div>
         </div>
     </section>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoHk7bK8Z+gQIv6I6dHSZl+4E5AqBvJ0I5v6Yk/jh6v9KI7" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
   </body>
 </html>
