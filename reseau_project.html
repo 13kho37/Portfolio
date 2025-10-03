@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Portfolio Alizée Bochaton</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  </head>
+  <body>
+    <section id="project_web">
+        <div class="container-fluid mb-4">
+            <div id="navbar_div">
+               <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="index.html#home_page">Alizée Bochaton</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav_links" aria-controls="nav_links" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-end" id="nav_links">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                        <a class="nav-link" href="index.html#about_me">À propos</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="index.html#projects">Projets</a>
+                        </li>
+                        <li class="nav-item">
+                        <a class="nav-link" href="index.html#labs">Challenges et labs</a>
+                        </li>
+                        <li class="nav-item">
+                        <button type="button" class="nav-link btn btn-link" data-bs-toggle="modal" data-bs-target="#contactModal">Contact</button>
+                        </li>
+                    </ul>
+                    </div>
+                </div>
+                </nav>
+            </div>
+        </div>
+        <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="contactModalLabel">Contact Info</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h5>Email:</h5>
+                    <p>abochaton.pro@gmail.com</p>
+                    <h5>Téléphone:</h5>
+                    <p>+33 7 65 88 72 99</p>
+                    <h5>LinkedIn:</h5>
+                    <p><a href="https://www.linkedin.com/in/aliz%C3%A9e-bochaton-b37835330/" target="_blank">Mon profil LinkedIn</a></p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="project_reseau_details">
+        <div id="project_reseau_details_title" class="container mt-5">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <h2 class="mb-4 mt-5">Projet réseau - Mise en place et sécurisation d’un réseau d’entreprise</h2>
+                    <p class="mb-4"><i>Dans ke cadre d'un projet pédagogique, j'ai pu participer à la mise en place d'une simulation d'une infrastructure réseau d'entreprise. L'objectif était de mettre en place un réseau local complet, avec tous les service nécessaires, de mettre en place des mesures de sécurité et une solution de supervision.</i></p>
+                    <div class="card mb-5">
+                        <div class="card-body">
+                            <h4>Infrastructure mise en place</h4>
+                            <hr>
+                                <p>Notre réseau était composé de plusieurs machines virtuelles, interconnectées et séparées en deux zones (Admin & Client) via un firewall :</p>
+                                <ul>
+                                    <li>Une machine OPNSense qui jouait le rôle de firewall et de routeur</li>
+                                    <li>Une machine Windows Server 2022 qui gérait les services DNS DHCP et Active Director</li>
+                                    <li>Un poste Windows 10 client reliée à l'AD</li>
+                                    <li>Une machine AlmaLinux qui hébergeait ProxySquid pour sécuriser les flux web</li>
+                                    <li>Une machine Ubuntu pour Wazuh</li>
+                                </ul>
+                                <div class="row justify-content-center">
+                                    <div class="col-md-4 col-sm-12">
+                                        <img src="assets/schema_reseaub1.png" class="img-fluid" >
+                                    </div>     
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card mb-5">
+                            <div class="card-body">
+                                <h4>Les mesures de sécurité</h4>
+                                <hr>
+                                <p>Pour sécuriser le réseau, nous avons mis en place:</p>
+                                <ul>
+                                    <li>Une segmentation réseau avec séparation Admin/Client.</li>
+                                    <li>Des règles de pare-feu (filtrage d’adresses, blocage de sites spécifiques, contrôle des flux entrants/sortants).</li>
+                                    <li>Proxy avec filtrage web et restrictions d’accès</li>
+                                    <li>Supervision via Wazuh : collecte centralisée des événements systèmes, sécurité et applications</li>
+                                    <li>Agents et filtres personnalisés pour monitorer l’activité Windows (Sysmon, PowerShell, authentifications, etc.)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class ="card mb-5">
+                            <div class ="card-body">
+                                <h4>Documentation</h4>
+                                <hr>
+                                <p class="mb-3">En parallèle nous avons rédigé un dossier technique comme ce qui aurait pû être fait dans le cadre d'une prestation réelle. Ce livrable est censé rendre les configurations réseau claires en cas de nécessité d'intervention par un autre technicien. </p>
+                                <a class="btn btn-primary" onclick="window.location.href='assets/dossier_tech_reseaub1.pdf';" role="button">Dossier technique du projet</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

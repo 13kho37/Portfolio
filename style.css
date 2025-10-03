@@ -105,3 +105,9 @@ html {
 .bi-rocket-takeoff::before {
     margin-right: 10px;
 }
+
+@media (max-width: 767px) {
+  body {
+    padding: 15px; 
+  }
+}
