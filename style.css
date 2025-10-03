@@ -111,3 +111,19 @@ html {
     padding: 15px; 
   }
 }
+
+#lab_card:hover {
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translate(0, -5px);
+    transition-duration: 100ms;
+
+}
+
+#clickable_title:hover{
+    color:rgb(0, 140, 255) 
+}
+
+#link_icon:hover{
+    cursor: pointer;
+}

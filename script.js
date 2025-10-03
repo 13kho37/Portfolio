@@ -18,7 +18,7 @@ const projets = [
         description:"Développement d’un système de lecture de badges RFID avec un ESP32, relié à une API pour gérer les autorisations",
         features: ["ESP-32", "Framework arduino", "Communication avec une API", "Module RFID RC522"],
         image: "assets/iot_carousel.jpg",
-        link: "iot.html"
+        link: "iot_project.html"
     },
     {
         title: "Premiers pas en reverse engineering",
